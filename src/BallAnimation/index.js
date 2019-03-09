@@ -1,6 +1,7 @@
 import React from 'react';
 import Canvas from '../PaperCanvas';
 import { Shape, Point, Color } from 'paper';
+import './styles.css';
 
 let animation = (scope) => {
   const { view } = scope;
@@ -9,8 +10,9 @@ let animation = (scope) => {
   let color = () => new Color(randn(), randn(), randn());
   let randint = (max, min) => Math.floor(Math.random() * (max - min) + min);
   const makecircle = () => {
-    let c = new Shape.Circle(view.center, randint(5, 25));
+    let c = new Shape.Circle(view.center, randint(15, 35));
     c.fillColor = color();
+    c.blendMode = 'multiply';
     let absvelocity = 10;
     c.velocity = new Point(randint(-absvelocity, absvelocity), randint(-absvelocity, absvelocity));
     return c;

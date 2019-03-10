@@ -5,7 +5,6 @@
   text-align: left;
   position: relative;
   border-bottom: 1px solid #fff;
-  cursor: none;
 }
 .headertext {
   position: absolute;
@@ -28,9 +27,9 @@ h3 {
   margin-top: 2rem
 }
 .logos h4 {
-  justify-self: left;
   width: 100%;
   font-family: 'Roboto Mono';
   color: #fff;
   padding-left: 3vw;
+  text-shadow: #300 2px 2px 0;
 }

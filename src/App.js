@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import BallAnimation from './BallAnimation';
+// import BallAnimation from './BallAnimation';
+import AtomAnimation from './AtomAnimation';
 import LogoImage from './LogoImage';
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
             <h1>david worley</h1>
             <h3>I can help you create amazing online experiences.</h3>
           </div>
-          <BallAnimation width={ w } height={ 500 }/>
+          <AtomAnimation width={ w } height={ 500 }/>
         </div>
         <div className="logos">
           <h4>Companies I've worked with</h4>

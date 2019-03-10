@@ -4,7 +4,8 @@
 .header {
   text-align: left;
   position: relative;
-  border-bottom: 1px solid #990000;
+  border-bottom: 1px solid #fff;
+  cursor: none;
 }
 .headertext {
   position: absolute;

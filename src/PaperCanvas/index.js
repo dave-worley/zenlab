@@ -28,7 +28,7 @@ export default class PaperCanvas extends Component {
 
   render() {
     return (
-      <canvas ref={ this.canvas } className='canvas' />
+      <canvas ref={ this.canvas } className='canvas'/>
     );
   }
 }

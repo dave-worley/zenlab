@@ -11,7 +11,8 @@
   position: absolute;
   top: 100px;
   left: 3vw;
-  color: #fff
+  color: #fff;
+  text-shadow: #300 2px 2px 0;
 }
 h1 {
   font-family: 'Major Mono Display', monospace;

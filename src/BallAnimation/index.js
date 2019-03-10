@@ -7,7 +7,7 @@ let animation = (scope) => {
   const { view } = scope;
   let bounds = view.size;
   let randn = () => Math.random();
-  let color = () => new Color(randn(), randn(), randn());
+  let color = () => new Color(randn(), 0, 0);
   let randint = (max, min) => Math.floor(Math.random() * (max - min) + min);
   let circles = [];
   const makecircle = () => {

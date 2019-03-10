@@ -9,6 +9,7 @@ let animation = (scope) => {
   let randn = () => Math.random();
   let color = () => new Color(randn(), randn(), randn());
   let randint = (max, min) => Math.floor(Math.random() * (max - min) + min);
+  let circles = [];
   const makecircle = () => {
     let c = new Shape.Circle(view.center, randint(15, 35));
     c.fillColor = color();
@@ -19,7 +20,6 @@ let animation = (scope) => {
   };
   const addcircle = (circles) => circles.push(makecircle());
 
-  let circles = [];
   for (let i = 0; i < 1; i++) {
     addcircle(circles);
   }
@@ -27,14 +27,15 @@ let animation = (scope) => {
 
   view.onFrame = () => {
     circles.forEach((c) => {
-      if (c.bounds.right > bounds.width || c.bounds.left <= 0) {
+      if (c.bounds.right >= bounds.width || c.bounds.left <= 0) {
         c.velocity.x *= -1;
       }
-      if (c.bounds.bottom > bounds.height || c.bounds.top <= 0) {
+      if (c.bounds.bottom >= bounds.height || c.bounds.top <= 0) {
         c.velocity.y *= -1;
       }
       c.position = c.position.add(c.velocity);
     });
+    bounds = view.size;
   };
 
   const more = setInterval(() => {

@@ -43,16 +43,17 @@ class App extends Component {
         </div>
         <div className="featuredProjects">
           <h4>Projects</h4>
-          {
-            projects.map((p, i) => {
-              return (
-                <div key={ i } className="project">
-                  <SquaresBanner width={ 200 } height={ 5 }/>
-                  { p }
-                </div>
-              );
-            })
-          }
+          <div className="content">
+            {
+              projects.map((p, i) => {
+                return (
+                  <div key={ i } className="project">
+                    { p }
+                  </div>
+                );
+              })
+            }
+          </div>
         </div>
       </div>
     );

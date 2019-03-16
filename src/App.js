@@ -3,6 +3,7 @@ import './App.css';
 // import BallAnimation from './BallAnimation';
 import AtomAnimation from './AtomAnimation';
 import LogoImage from './LogoImage';
+import SquaresBanner from './SquaresBanner';
 
 class App extends Component {
   render() {
@@ -14,6 +15,13 @@ class App extends Component {
       'time': 'Time, Inc.',
       'syfy': 'SyFy'
     };
+    const projects = [
+      'Easy Inventory',
+      'Deviant Art',
+      'Time.com',
+      'Instructables',
+      'Docker'
+    ];
     return (
       <div className="App">
         <div className="header">
@@ -28,7 +36,20 @@ class App extends Component {
           {
             Object.entries(companies).map(([key, value], i) => {
               return (
-                <LogoImage key={ i } companyName={ key } alt={ value } />
+                <LogoImage key={ i } companyName={ key } alt={ value }/>
+              );
+            })
+          }
+        </div>
+        <div className="featuredProjects">
+          <h4>Projects</h4>
+          {
+            projects.map((p, i) => {
+              return (
+                <div key={ i } className="project">
+                  <SquaresBanner width={ 200 } height={ 5 }/>
+                  { p }
+                </div>
               );
             })
           }

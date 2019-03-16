@@ -19,6 +19,13 @@ h1 {
 h3 {
   font-family: 'Roboto Mono';
 }
+h4 {
+  width: 100%;
+  font-family: 'Roboto Mono';
+  color: #fff;
+  padding-left: 3vw;
+  text-shadow: #300 2px 2px 0;
+}
 .logos {
   display: flex;
   justify-content: center;
@@ -26,10 +33,12 @@ h3 {
   text-align: left;
   margin-top: 2rem
 }
-.logos h4 {
-  width: 100%;
-  font-family: 'Roboto Mono';
-  color: #fff;
-  padding-left: 3vw;
-  text-shadow: #300 2px 2px 0;
+.featuredProjects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.project {
+  width: 20vw;
 }
